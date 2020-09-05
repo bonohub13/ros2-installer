@@ -1,8 +1,8 @@
 #!/bin/bash
 # -*- coding: utf-8 -*-
 
-ditro=$(lsb_release -cs)
-if [[ $distro == "ulyana" ]];then
+distro=$(lsb_release -cs)
+if [ "$distro" = "ulyana" -o "$distro" = focal ];then
     distro="focal"
 elif [ -n $1 ];then
     distro="$1"
